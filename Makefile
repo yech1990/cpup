@@ -3,11 +3,13 @@
 # Ye Chang, 2020-12-22 01:14
 #
 
+CC = g++
+
 all: cpup
 	@echo "Done!"
 
 cpup: cpup.cpp
-	@g++ -O3 -o $@ $<
+	@$(CC) -O3 -o $@ $<
 
 .PHONY : test
 test: cpup
